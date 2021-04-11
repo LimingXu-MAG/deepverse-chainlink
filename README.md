@@ -3,6 +3,7 @@
 ## a platform leveraging both Machine Learning and Blockchain to solve real-world problems
 
 - Developed by: Fredrik Liu, Lupeng Yang, Siyu Chen
+- Video link: https://youtu.be/cxvsUlYAkDI 
 
 Let me make this clear first, machines _do **not**_ learn and smart contracts _are **not**_ smart. Why? Because if we slightly distort the inputs, the output is very likely to become completely wrong. A machine learning algorithm, if trained by 'looking' at an object straight, will fail to recognize the object if rotated unless it was also trained to recognition rotation. (Though Fred is working on 3D equivariant neural networks that can handle translation, rotation, and inversion under Euclidean space). For smart contracts, which are hard coded to do only one thing, has proven to be neither smart nor even enforceable for the case of the DAO. But Blockchain is still an truly innovative approach to governance for networks and machines. 
 
@@ -51,6 +52,3 @@ For animals in zoos, it can be easily achieved as an interactive way for fundrai
 ## Attacks
 
 For viewers of our video, you may spot GAN in our script. We briefly showed the Generative Adversarial Network (GAN) attack for image recognition and we have successfully launched an attack to our image recognition APIs. This is indeed a problem but can be addressed in a decentralized way. Our previous development for generating federated learning models while protecting data privacy comes in handy to address this issue, which is available at https://deepverse.co.uk. 
-
-
-
