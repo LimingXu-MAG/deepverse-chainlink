@@ -23,7 +23,8 @@ const createRequest = (input, callback) => {
   const endpoint = validator.validated.data.endpoint || 'tags'
   const url = `https://api.imagga.com/v2/${endpoint}`
   const image_url = validator.validated.data.image_url
-  const appid = process.env.API_KEY;
+  // for imagga you can use Basic Authorization
+  const appid = process.env.API_KEY; 
 
   const params = {
     image_url,
@@ -40,6 +41,30 @@ const createRequest = (input, callback) => {
     params
   }
 
+// 
+// Other endpoint available, such as detecting the similarity between two faces or objects
+// 
+// const customParams = {
+//   face_id: ['face_id', 'picture1'],
+//   second_face_id : ['second_face_id', 'picture2'],
+//   endpoint: false
+// }
+
+// const createRequest = (input, callback) => {
+//   // The Validator helps you validate the Chainlink request data
+//   const validator = new Validator(callback, input, customParams)
+//   const jobRunID = validator.validated.id
+//   const endpoint = validator.validated.data.endpoint || 'faces/similarity'
+//   const url = `https://api.imagga.com/v2/${endpoint}`
+//   const face_id = validator.validated.data.face_id.toLowerCase()
+//   const second_face_id = validator.validated.data.second_face_id.toLowerCase()
+
+//   const params = {
+//     face_id,
+//     second_face_id,
+//   }  
+
+
   // The Requester allows API calls be retry in case of timeout
   // or connection failure
   Requester.request(config, customError)
@@ -48,7 +73,7 @@ const createRequest = (input, callback) => {
       // result key. This allows different adapters to be compatible with
       // one another.
       // response.data.result = Requester.validateResultNumber(response.data, [tsyms])
-      response.data.result = Requester.validateResultNumber(response.data, ['results','tags[0]','tag','en'])
+      response.data.result = Requester.validateResultNumber(response.data, ['results','tags'])
       callback(response.status, Requester.success(jobRunID, response))
     })
     .catch(error => {
