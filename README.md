@@ -10,6 +10,7 @@ Our vision at **DeepVerse** is to integrate machine learning and blockchain to *
 ```diff
 + Bridging the digital world and the real world.
 ```
+
 ## Architecture
 - Machine learning backends
 - Model hosted decentralized
@@ -17,8 +18,8 @@ Our vision at **DeepVerse** is to integrate machine learning and blockchain to *
 - API calls via Oracles
 - Smart contract logic
 
-
 ![Illustration](https://github.com/F14r3/deepverse-chainlink/blob/master/illustration.png)
+
 
 ## What problem we are solving! 
 Last-mile problem! What blockchain can not do!
@@ -33,7 +34,10 @@ verification for objects on-chain and off-chain without a centralized human inte
 
 ### 1. Deepverse for product tracking
 As we all know, the tamper-proof properties of blockchain are most suitable for product tracking. However, traditional schemes are easy to be deceived because there is no mechanism to prevent people from uploading fake data to the blockchain. Now, with DeepVerse's solution, you can customize a machine learning model for the product you want to track (for example, let’s say an apple recognition model), then verify if each record to be uploaded to the blockchain really means an apple. This apple recognition model bridges the digital apple (that is on the blockchain) and the real apple (that is on a supply chain), which finally perfects the blockchain tracking system. No cheating on or off the chain! In particular, we notice so far the multi-target recognition algorithm has made some good progress. By calling these algorithms, the blockchain is able to directly count the number of apples and determine their sizes and positions in a camera, which has great potential for cooperation with IoT (Internet of things) equipment.
+
+
 <img src="https://github.com/F14r3/deepverse-chainlink/blob/master/tracebility_apple.png" text='illustration for tracebility' width="600">
+
 
 ### 2. DeepVerse for NFTs
 #### 2.1 Chain of Custody
